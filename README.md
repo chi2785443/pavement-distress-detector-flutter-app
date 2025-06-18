@@ -2,7 +2,15 @@
 
 An AI-powered mobile application designed to detect pavement cracks and other road surface distress using a TensorFlow Lite model. This app integrates real-time detection, GPS mapping, and historical logging to assist road engineers and municipalities in maintaining road infrastructure efficiently.
 
-![alt text](screenshots/0.png) ![alt text](screenshots/1.png) ![alt text](screenshots/2.png) ![alt text](screenshots/3.png) ![alt text](screenshots/4.png)
+<div align="center">
+  <img src="screenshots/0.png" alt="screenshot 0" width="200"/>
+  <img src="screenshots/1.png" alt="screenshot 1" width="200"/>
+  <img src="screenshots/2.png" alt="screenshot 2" width="200"/>
+  <img src="screenshots/3.png" alt="screenshot 3" width="200"/>
+  <img src="screenshots/4.png" alt="screenshot 4" width="200"/>
+</div>
+
+---
 
 ## 📱 Built With
 
@@ -48,26 +56,23 @@ lib/
 │   ├── detection/
 │   │   ├── domain/
 │   │   │   └── entities/
-│   │   │           └── detection_entry.dart
+│   │   │       └── detection_entry.dart
 │   │   ├── data/
 │   │   └── presentation/
-│   ├       └── pages
-│   ├       │     └── camera_screen.dart
-│   ├       │     └── captured_image_screen.dart
-│   ├       │     └── home_screen.dart
-│   ├       │     └── map_screen.dart
-│   ├       │     └── welcome_screen.dart
-│   ├       └── providers
-│   ├             └── camera_provider.dart
-│   ├             └── detection_history_provider.dart
-│   │
-│   ├── core/
+│   │       └── pages/
+│   │            └── camera_screen.dart
+│   │            └── captured_image_screen.dart
+│   │            └── home_screen.dart
+│   │            └── map_screen.dart
+│   │            └── welcome_screen.dart
+│   │       └── providers/
+│   │            └── camera_provider.dart
+│   │            └── detection_history_provider.dart
 │
-│
+├── core/
 ├── images/
 │   └── crack.jpeg
 │   └── non cracked.jpeg
-│
 assets/
 ├── models/
 │   └── cnn_crack_detector.tflite
@@ -92,9 +97,10 @@ assets/
 
 ```bash
 git clone https://github.com/chi2785443/pavement-distress-detector.git
-send me a message send you the tflite file for the model used
 cd pavement-distress-detector
 ```
+
+> 📌 **Note:** Send a message to [neduaguwa443@gmail.com](mailto:neduaguwa443@gmail.com) to get the TFLite model file used.
 
 ### 2. Install Dependencies
 
@@ -114,7 +120,7 @@ flutter:
 
 ### 4. Add Google Maps API Key
 
-Set your API key in `AndroidManifest.xml` and `AppDelegate.swift`.
+Set your API key in `AndroidManifest.xml` (Android) and `AppDelegate.swift` (iOS).
 
 ### 5. Run the App
 
@@ -140,9 +146,9 @@ flutter run
 
 ## 📌 State Management (Riverpod)
 
-- `DetectionHistoryNotifier`: Holds the list of previous detections
-- `detectionHistoryProvider`: Shared state across widgets
-- Data stored includes `label`, `confidence`, `timestamp`, and optional GPS
+- `DetectionHistoryNotifier`: Stores previous detections
+- `detectionHistoryProvider`: Shared Riverpod state provider
+- Each detection includes `label`, `confidence`, `timestamp`, and optional GPS coordinates
 
 ---
 
@@ -152,15 +158,15 @@ flutter run
 - Location
 - File System Access
 
-Ensure to add necessary permissions in `AndroidManifest.xml` and `Info.plist`.
+Make sure these are granted in `AndroidManifest.xml` and `Info.plist`.
 
 ---
 
 ## 📊 Future Enhancements
 
 - Admin analytics dashboard
-- Model optimization (quantization/pruning)
-- Fine-grained classification (e.g., transverse vs longitudinal cracks)
+- Model optimization (quantization, pruning)
+- Fine-grained classification (e.g., transverse, longitudinal cracks)
 - Offline caching and export of logs
 
 ---

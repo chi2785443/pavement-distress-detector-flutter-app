@@ -15,11 +15,11 @@ class DetectionResult {
 class WelcomePage extends StatelessWidget {
   final List<DetectionResult> previousDetections = [
     DetectionResult(
-      image: File('images/non cracked.jpeg'), // Replace with real path
+      image: File('images/crack.jpeg'), // Replace with real path
       result: 'Crack Detected',
     ),
     DetectionResult(
-      image: File('images/crack.jpeg'), // Replace with real path
+      image: File('images/non cracked.jpeg'), // Replace with real path
       result: 'No Distress',
     ),
     // Add more detections as needed
